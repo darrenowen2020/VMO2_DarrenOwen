@@ -59,41 +59,5 @@ namespace VMO2.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://api.openai.com/v1/engines.
-        /// </summary>
-        internal static string BaseOpenAIURL {
-            get {
-                return ResourceManager.GetString("BaseOpenAIURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to sk-proj-hkdLI0XTECVRrjXJwdRST3BlbkFJHqt9GOOsnNIIMI1vu4Mz.
-        /// </summary>
-        internal static string BearerToken {
-            get {
-                return ResourceManager.GetString("BearerToken", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to proj_aeiWtX1lhVVEg5xVfOhWh298.
-        /// </summary>
-        internal static string DefaultProject {
-            get {
-                return ResourceManager.GetString("DefaultProject", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to gpt-3.5-turbo-instruct.
-        /// </summary>
-        internal static string GPTModel {
-            get {
-                return ResourceManager.GetString("GPTModel", resourceCulture);
-            }
-        }
     }
 }

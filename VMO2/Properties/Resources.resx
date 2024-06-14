@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BaseOpenAIURL" xml:space="preserve">
-    <value>https://api.openai.com/v1/engines</value>
-  </data>
-  <data name="BearerToken" xml:space="preserve">
-    <value>sk-proj-hkdLI0XTECVRrjXJwdRST3BlbkFJHqt9GOOsnNIIMI1vu4Mz</value>
-  </data>
-  <data name="DefaultProject" xml:space="preserve">
-    <value>proj_aeiWtX1lhVVEg5xVfOhWh298</value>
-  </data>
-  <data name="GPTModel" xml:space="preserve">
-    <value>gpt-3.5-turbo-instruct</value>
-  </data>
 </root>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VMO2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0212e831a52e1e27d7813dcbbcfd1f19983068c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("VMO2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VMO2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

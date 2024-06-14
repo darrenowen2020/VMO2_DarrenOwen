@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Darren\\source\\repos\\VMO2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\vmo2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\vmo2.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\pages\\vmo2demo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\pages\\vmo2demo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "VMO2Demo.razor",
               "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Pages\\VMO2Demo.razor",
               "RelativeDocumentMoniker": "VMO2\\Pages\\VMO2Demo.razor",
               "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Pages\\VMO2Demo.razor",
               "RelativeToolTip": "VMO2\\Pages\\VMO2Demo.razor",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAABAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-13T10:26:12.07Z",
               "IsPinned": true,
@@ -40,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SalesResult.cs",
               "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesResult.cs",
               "RelativeDocumentMoniker": "VMO2\\Data\\SalesResult.cs",
@@ -52,12 +60,40 @@
               "IsPinned": true
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "VMO2\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Properties\\Resources.resx",
+              "RelativeToolTip": "VMO2\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-14T17:46:11.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VMO2",
+              "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\VMO2.csproj",
+              "RelativeDocumentMoniker": "VMO2\\VMO2.csproj",
+              "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\VMO2.csproj",
+              "RelativeToolTip": "VMO2\\VMO2.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-14T17:46:01.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SalesAnalysis.cs",
               "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesAnalysis.cs",
               "RelativeDocumentMoniker": "VMO2\\Data\\SalesAnalysis.cs",
