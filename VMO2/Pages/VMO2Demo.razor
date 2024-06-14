@@ -1,0 +1,140 @@
+﻿@page "/VMO2Demo"
+@using BlazorTable
+@using VMO2.Data
+@using System.Globalization
+@using Microsoft.AspNetCore.Components.Forms
+@using Newtonsoft.Json
+
+<h1>
+    Sales Analysis Code By Darren Owen
+</h1>
+<p>
+    <InputFile OnChange="openSalesFile" />
+</p>
+@if (_displayTable == true)
+{
+    <Table TableItem="SalesAnalysis" Items="_salesAnalysis" PageSize="20" ShowFooter="true" ColumnReorder="true">
+        <Column TableItem="SalesAnalysis" Title="Segment" Field="@(x => x.Segment)" Filterable="true" Sortable="true" Width="10%" DefaultSortColumn="true" />
+        <Column TableItem="SalesAnalysis" Title="Country" Field="@(x => x.Country)" Filterable="true" Sortable="true" />
+        <Column TableItem="SalesAnalysis" Title="Product" Field="@(x => x.Product)" Filterable="true" Sortable="true" />
+        <Column TableItem="SalesAnalysis" Title="Discount" Field="@(x => x.Discount)" Width="10%" />
+        <Column TableItem="SalesAnalysis" Title="Units Sold" Field="@(x => x.UnitsSold)" Align="Align.Right" Aggregate="AggregateType.Sum" Width="10%" />
+        <Column TableItem="SalesAnalysis" Title="Manufacturing Price" Format="£###.00" Align="Align.Right" Aggregate="AggregateType.Sum" Field="@(x => x.ManufacturingPrice)" Width="10%" />
+        <Column TableItem="SalesAnalysis" Title="Sales Price" Format="£###.00" Aggregate="AggregateType.Sum" Align="Align.Right" Field="@(x => x.SalePrice)" Width="10%" />
+        <Column TableItem="SalesAnalysis" Title="Date" Field="@(x => x.Date)" Width="10%" Filterable="true" Sortable="true" />
+        <Column TableItem="SalesAnalysis" Title="Profit/Loss" Field="@(x => x.ProfitLoss)" Width="10%" Sortable="true" Format="£###.00" Aggregate="AggregateType.Sum" Align="Align.Right" />
+
+        <Pager ShowPageNumber="true" ShowTotalCount="true" ShowPageSizes="true" />
+    </Table>
+}
+@code {
+    private List<SalesAnalysis>? _salesAnalysis = new List<SalesAnalysis>();
+    private bool _displayTable = false;
+    private string[] _contentLines;
+    private string _openAIPrompt;
+    /*
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+
+    }
+    */
+    private async Task openSalesFile(InputFileChangeEventArgs e)
+    {
+        IBrowserFile file = e.File;
+
+        if (file != null)
+        {
+            string contents = await streamSalesFile(file);
+            _contentLines = contents.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            _salesAnalysis = _contentLines.Skip(1).Select(v => parseStringToSaleResult(v)).Where(result => result != null).ToList();
+        }
+
+        _displayTable = true;
+        StateHasChanged();
+    }
+
+    private async Task<string> streamSalesFile(IBrowserFile file)
+    {
+        using var stream = file.OpenReadStream();
+        using var reader = new StreamReader(stream);
+
+        string fileContent = await reader.ReadToEndAsync();
+
+        return fileContent;
+    }
+    private string GetProfitLossFormat(bool IsProfit)
+    {
+        return IsProfit ? "text-profit" : "text-loss";
+    }
+    private SalesAnalysis? parseStringToSaleResult(string stringSalesResult)
+    {
+        SalesAnalysis? salesAnalysis = null;
+        double unitsSold;
+        double manufacturingPrice;
+        double salesPrice;
+        DateOnly date;
+
+        if (stringSalesResult.Trim().Length != 0)
+        {
+
+
+            string[] lineTokens = stringSalesResult.Split(',');
+
+            SalesResult salesResult = new SalesResult()
+                {
+                    Segment = lineTokens[0].Trim(),
+                    Country = lineTokens[1].Trim(),
+                    Product = lineTokens[2].Trim(),
+                    Discount = lineTokens[3].Trim()
+                };
+
+            try
+            {
+                unitsSold = double.Parse(lineTokens[4].Trim());
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"parseStringToSaleResult - conversion of units sold '{lineTokens[4].Trim()}': Error {ex.Message} - {ex.InnerException}");
+                unitsSold = 0;
+            }
+
+            try
+            {
+                manufacturingPrice = double.Parse(lineTokens[5].Remove(0, 1).Trim());
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"parseStringToSaleResult - conversion of manufacturing price '{lineTokens[5].Remove(0, 1)}': Error {ex.Message} - {ex.InnerException}");
+                manufacturingPrice = 0;
+            }
+
+            try
+            {
+                salesPrice = double.Parse(lineTokens[6].Remove(0, 1).Trim());
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"parseStringToSaleResult - conversion of sales price '{lineTokens[6].Remove(0, 1)}': Error {ex.Message} - {ex.InnerException}");
+                salesPrice = 0;
+            }
+
+            string dateString = lineTokens[7].Trim();
+            string format = "dd/MM/yyyy";
+
+            if (!DateOnly.TryParseExact(dateString, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
+            {
+                System.Diagnostics.Debug.WriteLine($"parseStringToSaleResult - conversion of date '{dateString}': Invalid Date Format. Used '01/01/1900' instead");
+                date = DateOnly.Parse("01/01/1900");
+            }
+
+            salesResult.UnitsSold = unitsSold;
+            salesResult.ManufacturingPrice = manufacturingPrice;
+            salesResult.SalePrice = salesPrice;
+            salesResult.Date = date;
+            salesAnalysis = new SalesAnalysis(salesResult);
+        }
+
+        return salesAnalysis;
+    }
+
+}

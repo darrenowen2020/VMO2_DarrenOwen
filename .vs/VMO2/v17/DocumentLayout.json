@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Darren\\source\\repos\\VMO2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\pages\\vmo2demo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\pages\\vmo2demo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\data\\salesanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\data\\salesanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|c:\\users\\darren\\source\\repos\\vmo2\\vmo2\\data\\salesresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1227255-A3BE-4C8D-9BE8-4937C633397E}|VMO2\\VMO2.csproj|solutionrelative:vmo2\\data\\salesresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VMO2Demo.razor",
+              "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Pages\\VMO2Demo.razor",
+              "RelativeDocumentMoniker": "VMO2\\Pages\\VMO2Demo.razor",
+              "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Pages\\VMO2Demo.razor",
+              "RelativeToolTip": "VMO2\\Pages\\VMO2Demo.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T10:26:12.07Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalesResult.cs",
+              "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesResult.cs",
+              "RelativeDocumentMoniker": "VMO2\\Data\\SalesResult.cs",
+              "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesResult.cs",
+              "RelativeToolTip": "VMO2\\Data\\SalesResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T10:35:04.123Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesAnalysis.cs",
+              "DocumentMoniker": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesAnalysis.cs",
+              "RelativeDocumentMoniker": "VMO2\\Data\\SalesAnalysis.cs",
+              "ToolTip": "C:\\Users\\Darren\\source\\repos\\VMO2\\VMO2\\Data\\SalesAnalysis.cs",
+              "RelativeToolTip": "VMO2\\Data\\SalesAnalysis.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:40:08.278Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
